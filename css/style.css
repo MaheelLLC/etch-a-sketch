@@ -1,0 +1,106 @@
+:root {
+    --primary-dark: #333;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
+}
+
+body {
+    background-color: var(--primary-light);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    color: rgb(52, 52, 52);
+    padding: 30px 0;
+    text-align: center;
+    margin: auto;
+}
+
+.header #title {
+    margin: 0px;
+    font-size: 60px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#grid {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    background-color: var(--secondary-light);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.grid-cell {
+    margin: 0px;
+    padding: 0px;
+}
+
+#settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px 20px 20px;
+}
+
+#settings button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 1px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    border-color: var(--primary-dark);
+}
+
+input[type='color'] {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 80px;
+    transition: transform 0.1s ease-in-out;
+    border: none;
+    background-color: transparent;
+    padding: 0px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+button:hover,
+input[type='color']:hover {
+    transform: scale(1.05);
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+button.active {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+}
+
+#sizeValue {
+    font-size: 20px;
+    margin: 10px 5px 5px 5px; /* Top, Right, Bottom, Left */
+}
+
+#sizeSlider {
+    width: 100%;
+}
